@@ -1,34 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="Manthay" content="width=device-width, initial-scale=1.0">
-        <title>Site-1</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <!-- Correção da viewport para funcionamento correto em celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site-1 - Manthay</title>
+    
+    <!-- O bloco de estilo foi movido para o local correto (dentro do head) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0b858a;
+            color: #22335f;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 24px;
+            border-radius: 8px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 5px;
+        }
+        .subtitulo-trabalho {
+            font-size: 1.2em;
+            font-weight: normal;
+            margin-top: 0;
+        }
+        .sucesso {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
-        <header>
-            <h1>Manthay</h1>
-            <h1> Trabalho de programação, valor 2.0</h1>
-            <p> objetivo: criar um site no vscode</p>
-        <style> 
-        header{background-color: #0b858a;
-                color:#22335f;
-                text-align: center;
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 16px;}
-        </style>
-        </header>
-        <main>
-            <h2>Primeira tentativa </h2>
-            <p>dia 18/06 tentativa numero 1 para a criação de um site simples com vscode</p>
-            <p>relatorio: tentativa 1-sucesso-</p>
-            <p>finalização do dia #1. horario de finalização 11:36:41
-            </p>
-        </main>
-    
-    
-    
-    </body>
-</html> 
+
+    <header>
+        <h1>Manthay</h1>
+        <!-- Alterado para parágrafo estilizado para manter a hierarquia correta -->
+        <p class="subtitulo-trabalho">Trabalho de programação, valor 2.0</p>
+        <p><strong>Objetivo:</strong> Criar um site no VS Code</p>
+    </header>
+
+    <main>
+        <h2>Primeira tentativa</h2>
+        <p>Dia 18/06: Tentativa número 1 para a criação de um site simples com VS Code.</p>
+        <p>Relatório: Tentativa 1 - <span class="sucesso">SUCESSO!</span></p>
+    </main>
+
+</body>
+</html>
+ 
