@@ -1,12 +1,9 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <!-- Correção da viewport para funcionamento correto em celulares -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site-1 - Manthay</title>
-    
-    <!-- O bloco de estilo foi movido para o local correto (dentro do head) -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,17 +28,29 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        h1 {
-            margin-bottom: 5px;
+        h1 { margin-bottom: 5px; }
+        .subtitulo-trabalho { font-size: 1.2em; font-weight: normal; margin-top: 0; }
+        .sucesso { color: #28a745; font-weight: bold; }
+        
+        /* Estilização do botão */
+        .container-botao {
+            text-align: center;
+            margin-top: 20px;
         }
-        .subtitulo-trabalho {
-            font-size: 1.2em;
-            font-weight: normal;
-            margin-top: 0;
+        button {
+            background-color: #ff4757;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .sucesso {
-            color: #28a745;
-            font-weight: bold;
+        button:hover {
+            background-color: #ff6b81;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -49,17 +58,41 @@
 
     <header>
         <h1>Manthay</h1>
-        <!-- Alterado para parágrafo estilizado para manter a hierarquia correta -->
         <p class="subtitulo-trabalho">Trabalho de programação, valor 2.0</p>
         <p><strong>Objetivo:</strong> Criar um site no VS Code</p>
     </header>
 
     <main>
-        <h2>Primeira tentativa</h2>
-        <p>Dia 18/06: Tentativa número 1 para a criação de um site simples com VS Code.</p>
-        <p>Relatório: Tentativa 1 - <span class="sucesso">SUCESSO!</span></p>
+        <section>
+            <h2>Primeira tentativa</h2>
+            <p>Dia 18/06: Tentativa número 1 para a criação de um site simples com VS Code.</p>
+            <p>Relatório: Tentativa 1 - <span class="sucesso">SUCESSO!</span></p>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>Segunda tentativa</h2>
+            <p>Dia 2/07: Retomando a tentativa anterior, agora com um código bem mais sólido e refeito em prol do embelezamento e polimento.</p>
+            <p>Relatório: Tentativa 2 - <span class="sucesso">SUCESSO!</span></p>
+        </section>
+        
+        <div class="container-botao">
+            <button>❤️ <span>0</span></button>
+        </div>
     </main>
 
+    <script>
+        // Seleciona TODOS os botões da página
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function(botao) {
+            botao.addEventListener("click", function botaoClicado() {
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                texto.textContent++;
+            });
+        });
+    </script>
 </body>
 </html>
- 
